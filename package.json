@@ -1,0 +1,22 @@
+{
+  "name": "ctrader_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tests-chrome": "npx playwright test openPositionTest.spec.ts --project=chromium",
+    "tests-firefox": "npx playwright test openPositionTest.spec.ts --project=firefox",
+    "tests-all": "npm run tests-chrome && npm run tests-firefox",
+    "tests-all-parallel": "npm run tests-chrome & npm run tests-firefox"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.7"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
