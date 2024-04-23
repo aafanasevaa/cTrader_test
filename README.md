@@ -42,9 +42,9 @@ all instances of the pages are built in the single place (**pageManager.ts**) fi
 
 ***
 
-### 🛠️ Running tests
+### 🛠️ Running test
 
-Before running tests please update the .env file with the correct credentials (they are not added to the repository as it is public).
+Before running test please update the .env file with the correct credentials (they are not added to the repository as it is public).
 <br />
 <br />
 The .env file should look as below with **no spaces**: <br />
@@ -72,7 +72,8 @@ Several commands are configured to run the test:<br />
 
 ### 💹 Test Results
 <br />
-
+Run the following command to see the results of the test: `npx playwright show-report`
+<br />
 The results of the test run look as per below:
 <br />
 <br />
@@ -125,9 +126,9 @@ Tесты организованы в директории **'tests'**. Внут
 
 ***
 
-### 🛠️ Запуск тестов
+### 🛠️ Запуск теста
 
-Перед запуском тестов необходимо добавить значения имейла и пароля в файл .env (они не добавлены в репозиторий, так как он публичный).
+Перед запуском теста необходимо добавить значения имейла и пароля в файл .env (они не добавлены в репозиторий, так как он публичный).
 <br />
 <br />
 Файл .env должен выглядеть следующим образом **без пробелов**: <br />
@@ -155,7 +156,8 @@ PASSWORD=значение2
 
 ### 💹 Результаты теста
 <br />
-
+Данная команда позволяет просмотреть результаты теста: `npx playwright show-report`
+<br />
 Результаты запуска теста выглядят следующим образом:
 <br />
 <br />
