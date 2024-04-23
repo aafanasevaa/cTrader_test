@@ -12,6 +12,8 @@ export class MainPage {
     readonly closePositionButton: Locator;
     readonly closePositionsDialog: Locator;
     readonly yesButtonInClosePositionsDialog: Locator;
+    readonly tableInTradeWatch: Locator;
+    readonly tableInTradeWatchRow: Locator;
 
     constructor(page: Page) {
         this.loginButton = page.getByRole('button', {name: "Log In"});
@@ -24,7 +26,9 @@ export class MainPage {
         this.positionsTab = page.getByTestId('positions-tab');
         this.closePositionButton = page.getByTestId('position-close-button');
         this.closePositionsDialog = page.getByTestId('close-selected-positions-dialog');
-        this.yesButtonInClosePositionsDialog = this.closePositionsDialog.getByTestId('submit')
+        this.yesButtonInClosePositionsDialog = this.closePositionsDialog.getByTestId('submit');
+        this.tableInTradeWatch = page.getByTestId('table-context');
+        this.tableInTradeWatchRow = this.tableInTradeWatch.getByTestId('table-row');
     };
 
     async clickOnTheLoginButton() {
@@ -53,8 +57,13 @@ export class MainPage {
         await this.newOrderButtonInTradeWatch.click();
     };
 
-    async checkTheNumberOfTheOpenedPositionsInTradeWatch(number: string) {
-        await expect(this.positionsTab.getByTestId('counter')).toHaveText(number);
+    async checkTheNumberOfTheOpenedPositionsInTradeWatch(numberOfPositions: string) {
+        await expect(this.positionsTab.getByTestId('counter')).toHaveText(numberOfPositions);
+        expect(await this.tableInTradeWatchRow.count()).toEqual(Number(numberOfPositions));
+    }
+
+    async checkTheSymbolOfTheFirstOpenedPositionInTradeWatch(symbolName: string) {
+        await expect(this.tableInTradeWatchRow.getByTestId('table-row-cell-symbolName')).toHaveText(symbolName);
     };
 
     async closePositions() {

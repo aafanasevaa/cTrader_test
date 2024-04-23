@@ -28,9 +28,10 @@ test('Open position and check if it is displayed in TradeWatch', async ({pageMan
     await test.step('Check that the number of opened positions equals to 1', async () => {
         await pageManager.inPositionOpenedModalWindow().clickOnOkButton();
         await pageManager.onMainPage().checkTheDisplayOfTheElements();
-        await pageManager.onMainPage().checkTheContentsOfPopUp('Order Filled', 'Your request to Buy 0.01 BTC of BTCUSD was filled')
+        await pageManager.onMainPage().checkTheContentsOfPopUp('Order Filled', 'Your request to Buy 0.01 BTC of BTCUSD was filled');
 
         await pageManager.onMainPage().checkTheNumberOfTheOpenedPositionsInTradeWatch("1");
+        await pageManager.onMainPage().checkTheSymbolOfTheFirstOpenedPositionInTradeWatch('BTCUSD');
     });
 });
 
