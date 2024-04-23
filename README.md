@@ -77,7 +77,7 @@ Run the following command to see the results of the test: `npx playwright show-r
 The results of the test run look as per below:
 <br />
 <br />
-<img width="1001" alt="Снимок экрана 2024-04-23 в 3 15 36 PM" src="https://github.com/aafanasevaa/cTrader_test_task/assets/93313607/d3eb59af-9056-4978-ade4-6ddb631138e9">
+<img width="1025" alt="Снимок экрана 2024-04-23 в 9 11 00 PM" src="https://github.com/aafanasevaa/cTrader_test/assets/93313607/97c7275b-48df-4ab2-a47a-5bbd5037482c">
 
 
 If a test failed it will be retried one time.
@@ -161,7 +161,7 @@ PASSWORD=значение2
 Результаты запуска теста выглядят следующим образом:
 <br />
 <br />
-<img width="1001" alt="Снимок экрана 2024-04-23 в 3 15 36 PM" src="https://github.com/aafanasevaa/cTrader_test_task/assets/93313607/d3eb59af-9056-4978-ade4-6ddb631138e9">
+<img width="1025" alt="Снимок экрана 2024-04-23 в 9 11 00 PM" src="https://github.com/aafanasevaa/cTrader_test/assets/93313607/97c7275b-48df-4ab2-a47a-5bbd5037482c">
 
 
 Если тест упал, он будет перезапущен один раз.
